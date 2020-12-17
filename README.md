@@ -9,4 +9,4 @@ While Deep Learning models have proved to be able to capture spatial, temporal, 
 To fill this gap, we introduce here a framework for spatio-temporal prediction of climate and environmental data using deep learning. Specifically, we show how spatio-temporal processes can be decomposed in terms of a sum of products of temporally referenced basis functions, and of stochastic spatial coefficients which can be spatially modelled and mapped on a regular grid, allowing the reconstruction of the complete spatio-temporal signal.
 Applications on two case studies based on simulated and real-world data will show the effectiveness of the proposed framework in modelling coherent spatio-temporal fields.
 
-## Read here the full paper
+## [Read here the full paper](https://www.nature.com/articles/s41598-020-79148-7)
