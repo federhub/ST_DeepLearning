@@ -1,0 +1,31 @@
+experiment_name: simulated
+output_dir: ../outputs/simulated
+
+data:
+  dataset: simulated
+  spatial_basis_path: ../data/simulated/SIM1_spatialbasis.txt
+  time_coeff_path: ../data/simulated/SIM1_timecoeff.txt
+  n_spatial_samples: 7500
+  n_timesteps: 1008
+  train_val_size: 3000
+  val_split_idx: 2000
+  test_size: 1000
+  noise_fraction: 0.1
+  random_state: 42
+
+model:
+  n_eofs: 19
+  input_dim: 2
+  hidden_sizes: [300, 100, 100, 100, 100]
+  activation: elu
+  use_batch_norm: true
+
+train:
+  batch_size: 32
+  n_epochs: 2000
+  patience: 500
+  max_lr: 0.005
+  optimizer: nadam
+  loss_weight_main: 1.0
+  loss_weight_aux: 0.0
+  random_seed: 42

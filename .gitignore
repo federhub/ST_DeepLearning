@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# uv (lock file is committed for reproducibility)
+.uv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Outputs and generated artefacts
+outputs/
+*.npy
+*.keras
+
+# Temperature data (not in repo — place files under data/temperature/)
+data/temperature/
+
+# Claude Code
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store

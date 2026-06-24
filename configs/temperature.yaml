@@ -1,0 +1,33 @@
+# Temperature experiment config.
+# Data files are NOT included in the repository; place them under data/temperature/.
+# See README for the expected filenames and format.
+
+experiment_name: temperature
+output_dir: ../outputs/temperature
+
+data:
+  dataset: temperature
+  y_train_path: ../data/temperature/Temperature_f1Hour_20162018_FilledData_train.txt
+  y_test_path: ../data/temperature/Temperature_f1Hour_20162018_CleanedData_test.txt
+  X_train_path: ../data/temperature/Temperature_Stn_1Hour_20162018_train.txt
+  X_test_path: ../data/temperature/Temperature_Stn_1Hour_20162018_test.txt
+  mesh_path: ../data/temperature/DEM_2500_Stnid.csv
+  val_split_idx: 220
+  random_state: 42
+
+model:
+  n_eofs: 23        # captures ~95% of training variance
+  input_dim: 3      # X, Y, elevation
+  hidden_sizes: [100, 100, 100, 100, 100]
+  activation: relu
+  use_batch_norm: true
+
+train:
+  batch_size: 32
+  n_epochs: 200
+  patience: 20
+  max_lr: 0.005
+  optimizer: nadam
+  loss_weight_main: 1.0
+  loss_weight_aux: 0.0
+  random_seed: 42
